@@ -1,10 +1,18 @@
 <DOCTYPE html>
 <html>
     <head>
-        <title>REST with Forms</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
+  <meta charset="UTF-8">
+  <title>Multi Step Form with Progress Bar using jQuery and CSS3</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+      <link rel="stylesheet" href="/static/css/style.css">
+
+
+</head>
+
+<body>
     <script type="text/javascript">
      function checkvalue(val)
      {
@@ -16,19 +24,22 @@
         </script>
 
         <br />
-        <form method="post" action="http://192.168.1.10:5000/">
-            Name: <input type="text" name="name" id="name" /><br />
-            Phone: <input type="number" name="phone" id="phone" /><br />
-            Address1: <input type="address1" name="address1" id="address1" /><br />
-            Address2: <input type="address2" name="address2" id="address2" /><br />
-            email: <input type="email" name="email" id="email" /><br />
+        <form method="post" id="msform" action="http://192.168.1.10:5000/">
 
 
+            <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Create your account</h2>
+    <h3 class="fs-subtitle">in one step</h3>
+    <input type="text" name="name"  placeholder="Name" id="name" />
+    <input type="text" name="address1" placeholder="Address 1" id="address1" />
+    <input type="text" name="address2" placeholder="Address2" id="address2"/>
+    <input type="number" name="phone" placeholder="Phone" id="phone"/>
+    <input type="email" name="email" placeholder="Email" id="email"/>
+    <input type="submit" name="Submit" value="Submit" />
+  </fieldset>
 
 
-
-
-            <input type="submit" value="Submit" />
         </form>
     </body>
 </html>

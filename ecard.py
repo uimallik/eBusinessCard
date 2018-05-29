@@ -21,15 +21,15 @@ def sample():
 
 
 
-    test = "/home/default/BusinessCard/static"
+    test = "/home/default/Desktop/eBusinessCard/static"
 
-
+    '''
     import shutil
 
     shutil.rmtree(test,ignore_errors=True)
     os.makedirs(test,0755)
     #print(filelist)
-
+    '''
     ################## Choosing Template ################################################################################
     img = Image.open("input.png")
     print("Input taken")
@@ -68,7 +68,7 @@ def sample():
 
     ################ Move file to static folder ########################################################################
     import shutil
-    shutil.copy('/home/default/BusinessCard/'+eachone,'/home/default/BusinessCard/static/')
+    shutil.copy('/home/default/Desktop/eBusinessCard/'+eachone,'/home/default/Desktop/eBusinessCard/static/')
     ##############End Move file to static folder #######################################################################
 
 
@@ -89,7 +89,7 @@ def sample():
 
     ################ Move file to static folder ########################################################################
     import shutil
-    shutil.copy('/home/default/BusinessCard/'+eachoneQR,'/home/default/BusinessCard/static/')
+    shutil.copy('/home/default/Desktop/eBusinessCard/'+eachoneQR,'/home/default/Desktop/eBusinessCard/static/')
     ##############End Move file to static folder #######################################################################
 
 
