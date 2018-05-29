@@ -95,7 +95,8 @@ def sample():
     filename = 'static/'+eachoneQR
     filename2 = 'static/'+eachone
     #return render_template('download.html')
-    return render_template('idcard.html', value=filename, value2=filename2)
+    # return render_template('idcard.html', value=filename, value2=filename2)
+    return render_template('carddownload.html', value=filename, value2=filename2)
 
 
 
