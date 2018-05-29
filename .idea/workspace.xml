@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47207558-7e9a-403e-93d3-c133fdaf1ecc" name="Default" comment="latest">
-      <change afterPath="$PROJECT_DIR$/static/css/sty.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/carddownload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecard.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/carddownload.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/carddownload.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uca-url.eps" beforeDir="false" afterPath="$PROJECT_DIR$/uca-url.eps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uca-url.svg" beforeDir="false" afterPath="$PROJECT_DIR$/uca-url.svg" afterDir="false" />
     </list>
@@ -22,8 +21,8 @@
       <file leaf-file-name="ecard.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecard.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="390">
+              <caret line="76" column="53" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -58,20 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sty.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/sty.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="carddownload.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/carddownload.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="88" column="43" lean-forward="true" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
+            <state relative-caret-position="192">
+              <caret line="528" column="101" lean-forward="true" selection-start-line="528" selection-start-column="101" selection-end-line="528" selection-end-column="101" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -124,16 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mallikarjun Konakamurthy.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/Mallikarjun Konakamurthy.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
       <file leaf-file-name="download.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/download.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="23" />
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -144,6 +129,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -154,6 +140,8 @@
       <find>Download QR</find>
       <find>background</find>
       <find>download qr</find>
+      <find>title</find>
+      <find>congrat</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,6 +158,7 @@
         <option value="$PROJECT_DIR$/templates/idcard.html" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/static/css/st.css" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/ecard.py" />
         <option value="$PROJECT_DIR$/templates/carddownload.html" />
       </list>
@@ -219,6 +208,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -244,7 +234,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.ecard">
     <configuration name="ecard" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="eBusinessCard" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -263,9 +253,32 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="eBusinessCard" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.ecard" />
+      <item itemvalue="Python.test" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.ecard" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -621,27 +634,37 @@
     <entry file="file://$PROJECT_DIR$/templates/download.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecard.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/Mallikarjun Konakamurthy.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="76" column="53" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/carddownload.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="88" column="43" lean-forward="true" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
+        <state relative-caret-position="192">
+          <caret line="528" column="101" lean-forward="true" selection-start-line="528" selection-start-column="101" selection-end-line="528" selection-end-column="101" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />

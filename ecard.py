@@ -74,7 +74,7 @@ def sample():
 
     import pyqrcode
     url = pyqrcode.create('http://192.168.1.10:5000/file/'+eachone)
-    url.svg('uca-url.svg', scale=8)  #Saving as SVG file
+    url.svg('uca-url.svg', scale=8, background="white")  # Saving as SVG file
     url.eps('uca-url.eps', scale=2)
 
     ########### End of QR code generation ##############################################################################
