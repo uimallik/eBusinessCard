@@ -1,12 +1,10 @@
-import io
-import os
-from flask import Flask,request,send_file,render_template,send_from_directory
 from PIL import Image
-from PIL import ImageFont
 from PIL import ImageDraw
-from flask import send_file
+from PIL import ImageFont
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
+
 
 # New Registrations
 @app.route("/", methods=['POST'])
