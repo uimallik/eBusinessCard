@@ -112,15 +112,7 @@ def fil(id):
     filename = "/static/"+str(id)
     return render_template('download.html', value=filename)
 
-    '''
-    
-    with open(filename, 'rb') as bites:
 
-        return send_file(io.BytesIO(bites.read()),
-                     attachment_filename=filename,
-                     mimetype='image/png',as_attachment=True)
-
-    '''
 
 
 
