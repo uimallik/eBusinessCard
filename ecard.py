@@ -140,11 +140,30 @@ def fil(id):
     final = ls_alpha.split()
     xt = final[1:3]
     l_out = [''.join(e for e in string if e.isalnum()) for string in xt]
+
     known_sysdevices = ['Linux','Windows']
-    known_mobdevices = ['Andriod','iPhone',]
-    set1 = set(l_out)
-    set2 = set(l)
-    set(l_out)&
+    known_mobdevices = ['Android','iPhone']
+    sysout = [x for x in l_out if x in known_sysdevices]
+    mobout = [x for x in l_out if x in known_mobdevices]
+
+
+
+    #print(sysout)
+    #print(mobout)
+
+    if (len(sysout)==0 and len(mobout)==0):
+        dev = "other"
+
+    elif(len(sysout)!=0 and len(mobout)==0):
+        dev = sysout[0]
+
+    elif(len(sysout)==0 and len(mobout)!=0):
+        dev = mobout[0]
+
+    elif (len(sysout)!=0 and len(mobout)!=0):
+        dev = mobout[0]
+
+    print(dev)
 
 
     import datetime
