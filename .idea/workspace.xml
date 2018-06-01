@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47207558-7e9a-403e-93d3-c133fdaf1ecc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecard.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uca-url.eps" beforeDir="false" afterPath="$PROJECT_DIR$/uca-url.eps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uca-url.svg" beforeDir="false" afterPath="$PROJECT_DIR$/uca-url.svg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +18,8 @@
       <file leaf-file-name="ecard.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ecard.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+            <state relative-caret-position="258">
+              <caret line="173" column="105" selection-start-line="173" selection-start-column="105" selection-end-line="173" selection-end-column="105" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -276,10 +276,10 @@
     <frame x="441" y="24" width="1479" height="1056" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23008242" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23008242" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3378661" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3292683" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20502092" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20502092" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -621,8 +621,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ecard.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        <state relative-caret-position="258">
+          <caret line="173" column="105" selection-start-line="173" selection-start-column="105" selection-end-line="173" selection-end-column="105" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>

@@ -27,10 +27,9 @@ def sample():
     phone = str(request.form['phone'])
     email = str(request.form['email'])
 
-
-
-
-
+    import uuid
+    uid =  str(uuid.uuid4())
+    eachone = uid+'.png'
     ################## Choosing Template ################################################################################
     img = Image.open("input.png")
     print("Input taken")
@@ -43,20 +42,15 @@ def sample():
     #Address line 1
     font = ImageFont.truetype("/home/default/Downloads/Postman/resources/app/assets/fonts/OpenSans/OpenSans-Bold.ttf", 36)
     draw.text((550, 210),address1,(123,124,117),font=font)
-    eachone = name+'.png'
-    #img.save('imgoutput.png')
+
     img.save(eachone)
-
-
     #Address line 2
     font = ImageFont.truetype("/home/default/Downloads/Postman/resources/app/assets/fonts/OpenSans/OpenSans-Bold.ttf", 36)
     draw.text((550, 250),address2,(123,124,117),font=font)
-    #img.save('imgoutput.png')
     img.save(eachone)
     #Phone
     font = ImageFont.truetype("/home/default/Downloads/Postman/resources/app/assets/fonts/OpenSans/OpenSans-Bold.ttf", 36)
     draw.text((550, 290),"P: "+phone,(123,124,117),font=font)
-    #img.save('imgoutput.png')
     img.save(eachone)
     #Email
     font = ImageFont.truetype("/home/default/Downloads/Postman/resources/app/assets/fonts/OpenSans/OpenSans-Bold.ttf", 30)
@@ -84,7 +78,7 @@ def sample():
 
     ########### Convert SVG to PNG #####################################################################################
     import cairosvg
-    eachoneQR = 'QR'+name+'.png'
+    eachoneQR = 'QR'+uid+'.png'
     cairosvg.svg2png(url='uca-url.svg', write_to=eachoneQR)
     ########### End Convert SVG to PNG #################################################################################
 
@@ -111,7 +105,7 @@ def index():
 # Return Existing file
 @app.route("/file/<id>", methods=['GET'])
 def fil(id):
-    print id
+    customer_id = id.replace(".png","")
     filename = "/static/"+str(id)
     req_data = {}
     req_data['headers'] = dict(request.headers)
@@ -156,7 +150,6 @@ def fil(id):
         dev = mobout[0]
 
 
-
     import datetime
     import time
     ts = time.time()
@@ -165,18 +158,21 @@ def fil(id):
     date = str(r[0])
     tim = str(r[1])
     c, conn = connection()
-    c.execute("""INSERT INTO visitor_records (device,timevisited,ipaddress,datevisited)VALUES (%s,%s,%s,%s)""", (dev,tim,ipaddress,date))
+    c.execute("""INSERT INTO visitor_records (device,timevisited,ipaddress,datevisited,cid)VALUES (%s,%s,%s,%s,%s)""", (dev,tim,ipaddress,date,customer_id))
     conn.commit()
     c.close()
     return render_template('download.html', value=filename)
 
-@app.route('/dashboard/')
-def display_deals():
+@app.route("/dashboard/<id>", methods=['GET'])
+def display_deals(id):
 
     c, conn = connection()
 
-    query = "SELECT device,timevisited,ipaddress,datevisited from visitor_records"
-    c.execute(query)
+    #query = "SELECT device,timevisited,ipaddress,datevisited from visitor_records where cid=%s",id
+
+    #query_string = "SELECT device,timevisited,ipaddress,datevisited FROM visitor_records WHERE cid = '{id}'".format(username=username)
+    c.execute("SELECT device,timevisited,ipaddress,datevisited FROM visitor_records where cid = '{0}'".format(id))
+    #c.execute(query)
 
     data = c.fetchall()
 
