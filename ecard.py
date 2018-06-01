@@ -30,15 +30,7 @@ def sample():
 
 
 
-    test = "/home/default/Desktop/eBusinessCard/static"
 
-    '''
-    import shutil
-
-    shutil.rmtree(test,ignore_errors=True)
-    os.makedirs(test,0755)
-    #print(filelist)
-    '''
     ################## Choosing Template ################################################################################
     img = Image.open("input.png")
     print("Input taken")
@@ -163,7 +155,6 @@ def fil(id):
     elif (len(sysout)!=0 and len(mobout)!=0):
         dev = mobout[0]
 
-    print(dev)
 
 
     import datetime
@@ -173,34 +164,27 @@ def fil(id):
     r = sts.split()
     date = str(r[0])
     tim = str(r[1])
+    c, conn = connection()
+    c.execute("""INSERT INTO visitor_records (device,timevisited,ipaddress,datevisited)VALUES (%s,%s,%s,%s)""", (dev,tim,ipaddress,date))
+    conn.commit()
+    c.close()
+    return render_template('download.html', value=filename)
 
-
-
-
-
-
+@app.route('/dashboard/')
+def display_deals():
 
     c, conn = connection()
 
-    #('''INSERT INTO prescription (prescriptionId,patientId,fileName,patientName,timeStamp,penName,patientEmail,penId,doctorName) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)''',(userid, patientid, filename, patient_name, timestamp, prescription, email,prescriptionid,doctorname))
+    query = "SELECT device,timevisited,ipaddress,datevisited from visitor_records"
+    c.execute(query)
 
-    #query = "SELECT device,timevisited,ipaddress,datevisited from visitor_records"
-    #query = "INSERT INTO visitor_records ipaddress,"
-
-    #c.execute(query)
-
-    #data = c.fetchall()
+    data = c.fetchall()
 
     conn.close()
 
 
 
-
-
-
-    return render_template('download.html', value=filename)
-
-
+    return render_template("indexto.html", data=data)
 
 
 
