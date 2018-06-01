@@ -1,10 +1,21 @@
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template,json
 
 app = Flask(__name__)
 
+import MySQLdb
+
+def connection():
+    # Edited out actual values
+    conn = MySQLdb.connect(host="localhost",
+                           user="root",
+                           passwd="root",
+                           db = "eBusinessCard")
+    c = conn.cursor()
+
+    return c, conn
 
 # New Registrations
 @app.route("/", methods=['POST'])
@@ -110,6 +121,64 @@ def index():
 def fil(id):
     print id
     filename = "/static/"+str(id)
+    req_data = {}
+    req_data['headers'] = dict(request.headers)
+    # IP Address capturing
+    ipaddress = request.remote_addr
+    rs =  json.dumps(req_data['headers'])
+    rt = json.loads(rs)
+    # Device Capturing
+    st = json.dumps(rt['User-Agent'])
+    device = st.split()
+
+    #ls_alpha = [i for i in device if not i.isdigit()]
+    ls_alpha = str(device).replace('(','').replace(')','')
+    ls_alpha = str(ls_alpha).replace('/','').replace(')','')
+    final = ls_alpha.split()
+    ls_alpha = str(final).replace('"','').replace(';','')
+
+    final = ls_alpha.split()
+    xt = final[1:3]
+    l_out = [''.join(e for e in string if e.isalnum()) for string in xt]
+    known_sysdevices = ['Linux','Windows']
+    known_mobdevices = ['Andriod','iPhone',]
+    set1 = set(l_out)
+    set2 = set(l)
+    set(l_out)&
+
+
+    import datetime
+    import time
+    ts = time.time()
+    sts = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+    r = sts.split()
+    date = str(r[0])
+    tim = str(r[1])
+
+
+
+
+
+
+
+    c, conn = connection()
+
+    #('''INSERT INTO prescription (prescriptionId,patientId,fileName,patientName,timeStamp,penName,patientEmail,penId,doctorName) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)''',(userid, patientid, filename, patient_name, timestamp, prescription, email,prescriptionid,doctorname))
+
+    #query = "SELECT device,timevisited,ipaddress,datevisited from visitor_records"
+    #query = "INSERT INTO visitor_records ipaddress,"
+
+    #c.execute(query)
+
+    #data = c.fetchall()
+
+    conn.close()
+
+
+
+
+
+
     return render_template('download.html', value=filename)
 
 

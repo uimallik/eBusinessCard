@@ -19,7 +19,7 @@ def display_deals():
 
     c, conn = connection()
 
-    query = "SELECT * from visitor_records"
+    query = "SELECT device,timevisited,ipaddress,datevisited from visitor_records"
     c.execute(query)
 
     data = c.fetchall()
@@ -28,7 +28,7 @@ def display_deals():
 
 
 
-    return render_template("dashboard.html", data=data)
+    return render_template("indexto.html", data=data)
 
 if __name__ =='__main__':
     app.run(host='0.0.0.0',port=5200,debug=True)
