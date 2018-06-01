@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47207558-7e9a-403e-93d3-c133fdaf1ecc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/sample.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/records.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uca-url.eps" beforeDir="false" afterPath="$PROJECT_DIR$/uca-url.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uca-url.svg" beforeDir="false" afterPath="$PROJECT_DIR$/uca-url.svg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +18,8 @@
       <file leaf-file-name="ecard.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecard.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="601">
+              <caret line="124" selection-start-line="124" selection-end-line="125" selection-end-column="48" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -29,21 +27,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sample.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sample.py">
+      <file leaf-file-name="records.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/records.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+            <state relative-caret-position="405">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
-                <element signature="e#39#48#0" expanded="true" />
+                <element signature="e#34#74#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QRMallikarjun Konakamurthy.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/QRMallikarjun Konakamurthy.png">
-          <provider selected="true" editor-type-id="images" />
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -51,8 +53,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -88,11 +90,13 @@
         <option value="$PROJECT_DIR$/templates/download.html" />
         <option value="$PROJECT_DIR$/ecard.py" />
         <option value="$PROJECT_DIR$/sample.py" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/records.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="992" />
+    <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="928" />
     <option name="height" value="1056" />
@@ -155,7 +159,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sample">
+  <component name="RunManager" selected="Python.records">
     <configuration name="ecard" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="eBusinessCard" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,6 +173,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ecard.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="records" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="eBusinessCard" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/records.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -214,9 +236,11 @@
       <item itemvalue="Python.test" />
       <item itemvalue="Python.ecard" />
       <item itemvalue="Python.sample" />
+      <item itemvalue="Python.records" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.records" />
         <item itemvalue="Python.sample" />
         <item itemvalue="Python.ecard" />
       </list>
@@ -226,7 +250,8 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="992" y="24" width="928" height="1056" extended-state="4" />
+    <frame x="65" y="24" width="928" height="1056" extended-state="4" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37016574" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3378661" />
@@ -294,20 +319,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="134" selection-start-line="134" selection-end-line="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/carddownload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8040">
-          <caret line="536" column="199" selection-start-line="536" selection-start-column="199" selection-end-line="536" selection-end-column="199" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/download.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -556,16 +567,6 @@
     <entry file="file://$PROJECT_DIR$/static/QRMallikarjun Konakamurthy.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecard.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -579,6 +580,33 @@
           <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
           <folding>
             <element signature="e#39#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="124" selection-start-line="124" selection-end-line="125" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/records.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#34#74#0" expanded="true" />
           </folding>
         </state>
       </provider>
