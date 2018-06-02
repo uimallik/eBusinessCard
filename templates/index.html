@@ -1,44 +1,79 @@
-<DOCTYPE html>
-<html>
-    <head>
-  <meta charset="UTF-8">
-  <title>My eBusinessCard</title>
+<!DOCTYPE html>
+<html lang="en" >
 
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,600" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/jquery.selectric/1.10.1/selectric.css'>
 
-      <link rel="stylesheet" href="/static/css/style.css">
+      <link rel="stylesheet" href="/static/css/style2.css">
 
+  
 </head>
 
 <body>
-    <script type="text/javascript">
-     function checkvalue(val)
-     {
-        if(val==="others")
-            document.getElementById('color').style.display='block';
-        else
-            document.getElementById('color').style.display='none';
-     }
-        </script>
 
-        <br />
-        <form method="post" id="msform" action="http://192.168.1.10:5000/">
+  
+<div class="container card-list">
+  <div class="card blue">
+    <div class="title">Total Views</div><span></span>
+    <div class="value">{{totalviews}}</div>
+    <div class="stat"><b></b></div>
+  </div>
+  <div class="card green">
+    <div class="title">Last seen device</div><span></span>
+    <div class="value">{{device}}</div>
+    <div class="stat"><b></b></div>
+  </div>
+  <div class="card orange">
+    <div class="title">Last seen IP</div><span></span>
+    <div class="value">{{latestip}}</div>
+    <div class="stat"><b></b></div>
+  </div>
+  <div class="card red">
+    <div class="title">Last seen Date Time</div><span></span>
+    <div class="value">{{datetime}}</div>
+    <div class="stat"><b></b></div>
+  </div>
+</div>
+<div class="container projects">
+  <div class="projects-inner">
+    <header class="projects-header">
+      <div class="title">Full details</div>
+      <div class="count"></div><span class=""></span>
+    </header>
+    <table class="projects-table">
 
 
-            <!-- fieldsets -->
-  <fieldset>
-    <h2 class="fs-title">Create your account</h2>
-    <h3 class="fs-subtitle">in one step</h3>
-    <input type="text" name="name"  placeholder="Name" id="name" />
-    <input type="text" name="address1" placeholder="Address 1" id="address1" />
-    <input type="text" name="address2" placeholder="Address2" id="address2"/>
-    <input type="number" name="phone" placeholder="Phone" id="phone"/>
-    <input type="email" name="email" placeholder="Email" id="email"/>
-    <input type="submit" name="Submit" value="Submit" />
-  </fieldset>
+    </table>
+    <table class="projects-table">
+		 <thead>
+			{% for row in data %}
+        <tr>
+        {% for d in row %}
+            <td>{{ d }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+		 </thead>
+
+    </table>
+  </div>
+</div>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdn.jsdelivr.net/jquery.selectric/1.10.1/jquery.selectric.min.js'></script>
+
+  
+
+    <script  src="/static/js/index1.js"></script>
 
 
-        </form>
-    </body>
+
+
+</body>
+
 </html>
