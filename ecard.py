@@ -30,10 +30,19 @@ def sample():
     import uuid
     uid =  str(uuid.uuid4())
     eachone = uid+'.png'
+
+    import datetime
+    import time
+    ts = time.time()
+    sts = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
     ################## Choosing Template ################################################################################
     img = Image.open("input.png")
     print("Input taken")
-
+    #####################################################################################################################
+    c, conn = connection()
+    c.execute("""INSERT INTO registration (name,address1,address2,phone,email,created_at,cid)VALUES (%s,%s,%s,%s,%s,%s,%s)""", (name,address1,address2,phone,email,sts,uid))
+    conn.commit()
+    c.close()
 
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("/home/default/Downloads/Postman/resources/app/assets/fonts/OpenSans/AbhayaLibre-ExtraBold.ttf", 60)
@@ -158,7 +167,7 @@ def fil(id):
     date = str(r[0])
     tim = str(r[1])
     c, conn = connection()
-    c.execute("""INSERT INTO visitor_records (device,timevisited,ipaddress,datevisited,cid)VALUES (%s,%s,%s,%s,%s)""", (dev,tim,ipaddress,date,customer_id))
+    c.execute("""INSERT INTO visitor_records (device,timevisited,ipaddress,datevisited,cid,created_at)VALUES (%s,%s,%s,%s,%s,%s)""", (dev,tim,ipaddress,date,customer_id,sts))
     conn.commit()
     c.close()
     return render_template('download.html', value=filename)
@@ -181,6 +190,7 @@ def display_deals(id):
 
 
     return render_template("indexto.html", data=data)
+
 
 
 
